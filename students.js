@@ -92,18 +92,34 @@ const students = [
   
   for (let student of students) {
     for (let subject of student.subjects) {
-      if (subject.id === 2 && subject.score >= 80 && student.age >= 18) {
+      if (subject.id === 2 && subject.score >= 80 && student.age >= 18 && student.id===1) {
         // console.log(student.name);
-        document.getElementById("demo").innerHTML = students.map((item)=>
-        `<div>
+        document.getElementById("std1").innerHTML = students.map((item)=>
+        `<div id="std1">
         <div>Name: ${item.name}</div>
         <div>Age: ${item.age}</div>
-        <div>Place: ${item.subjects.map((ss)=>ss.name)}</div>
+        <div>Subject: ${item.subjects.map((ss)=>ss.name)}</div>
        
       </div>`
-  ).join('')
+  )
+      }
+
+  else {(subject.id === 2 && subject.score >= 80 && student.age >= 18 && student.id===3) 
+    // console.log(student.name);
+    document.getElementById("std2").innerHTML = students.map((item)=>
+    `<div>
+    <div>Name: ${item.name}</div>
+    <div>Age: ${item.age}</div>
+    <div>Subject: ${item.subjects.map((ss)=>ss.name)}</div>
+   
+  </div>`
+)
+   
+  }
+
+// 
         
       }
     }
-  }
+
   
